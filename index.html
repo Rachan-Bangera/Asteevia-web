@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ASTEEVIA — IT Fest</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Creepster&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- background video -->
+<video class="bg-video" autoplay muted loop playsinline>
+  <source src="vvv.mp4" type="video/mp4">
+  <!-- fallback -->
+</video>
+<div class="bg-overlay"></div>
+
+<!-- header / nav -->
+<div class="header">
+  <div class="hamburger" id="hamburger">☰</div>
+  <nav class="nav-panel" id="navPanel">
+    <a href="#home" data-close>Home</a>
+    <a href="#events" data-close>Events</a>
+    <a href="#about" data-close>About</a>
+    <a href="#contact" data-close>Contact</a>
+  </nav>
+</div>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="section home" aria-label="Home">
+    <div class="highlight" role="region" aria-label="Event highlight">
+      <div class="left">
+        <div class="brand">ASTEEVIA</div>
+        <div class="lead">ASTEEVIA 2025 — The annual IT festival where innovation, hacking, design and robotics collide. Join competitions, workshops and challenges across tech domains.</div>
+
+        <div class="controls">
+          <button class="btn" onclick="window.open('https://forms.gle/YOUR-GOOGLE-FORM-LINK','_blank')">Get Register</button>
+          <button class="btn secondary" onclick="openBrochure()">Brochure</button>
+        </div>
+
+        <div class="count-info">Next — Live on <strong>Nov 4, 2025</strong> · 9:00 AM</div>
+      </div>
+
+      <div class="count-card" aria-hidden="false">
+        <div style="font-size:14px;color:var(--muted);">Countdown to ASTEEVIA</div>
+        <div class="countdown" style="margin-top:8px;">
+          <div class="count-item"><div class="num" id="days">00</div><div class="lbl">Days</div></div>
+          <div class="count-item"><div class="num" id="hours">00</div><div class="lbl">Hours</div></div>
+          <div class="count-item"><div class="num" id="minutes">00</div><div class="lbl">Minutes</div></div>
+          <div class="count-item"><div class="num" id="seconds">00</div><div class="lbl">Seconds</div></div>
+        </div>
+        <div style="margin-top:8px;color:var(--muted);font-size:13px">Get ready — prizes, internships & workshops!</div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ABOUT -->
+  <section id="about" class="section about" aria-label="About">
+    <div class="info-card">
+      <h2>About ASTEEVIA</h2>
+      <p style="color:var(--muted);line-height:1.6">
+        Asteevia 2025 is a prestigious intercollegiate fest organized by the Department of BCA and BSC
+        at Sri Mahaveera College. It serves as a vibrant platform for students to showcase their 
+        talents and compete in a diverse range of events. The fest is designed to bring together 
+        creativity and innovation, providing opportunities to test knowledge, teamwork, problem-solving
+         abilities, and coding skills. Asteevia 2025 offers challenges that inspire innovation and 
+         strategic thinking. It is not just a competition, but also an opportunity for participants to 
+         gain new insights, collaborate with peers, build lasting relationships, and enhance their 
+         professional competencies in a stimulating environment.
+      </p>
+      <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn" onclick="location.href='#events'">View Events</button>
+        <button class="btn secondary" onclick="location.href='#contact'">Get Involved</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events" class="section events" aria-label="Events">
+    <h2>Events & Competitions</h2>
+    <div class="hint">💡 Hover or tap an icon to view details</div>
+
+    <div class="medallion" role="group" aria-label="Event ring">
+      <div class="center-face"><img src="center-face.jpeg" alt="Center"></div>
+
+      <div class="ring" id="ring">
+        <!-- orbiter elements; each has a --deg custom property to set angle -->
+        <!-- radius controlled by --r on .icon (default set in CSS) -->
+        <div class="orbiter" style="--deg:0deg"><div class="icon" data-event="Web Design" data-key="Web Design"><img src="logo1.jpeg" alt=""></div></div>
+        <div class="orbiter" style="--deg:32deg"><div class="icon" data-event="Coding Challenge" data-key="Coding Challenge"><img src="icons/icon2.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:64deg"><div class="icon" data-event="AI Hackathon" data-key="AI Hackathon"><img src="logo2.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:96deg"><div class="icon" data-event="Cyber Security Quiz" data-key="Cyber Security Quiz"><img src="icons/icon4.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:128deg"><div class="icon" data-event="Game Development" data-key="Game Development"><img src="icons/icon5.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:160deg"><div class="icon" data-event="UI/UX Design" data-key="UI/UX Design"><img src="icons/icon6.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:192deg"><div class="icon" data-event="Data Science Contest" data-key="Data Science Contest"><img src="icons/icon7.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:224deg"><div class="icon" data-event="Cloud Workshop" data-key="Cloud Computing Workshop"><img src="icons/icon8.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:256deg"><div class="icon" data-event="IoT Challenge" data-key="IoT Challenge"><img src="icons/icon9.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:288deg"><div class="icon" data-event="Robotics Contest" data-key="Robotics Contest"><img src="icons/icon10.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:320deg"><div class="icon" data-event="AR/VR Innovation" data-key="AR/VR Innovation"><img src="icons/icon11.png" alt=""></div></div>
+      </div>
+    </div>
+
+    <div class="footer-note">Icons orbit continuously — click to open event details.</div>
+  </section>
+
+    <!-- CONTACT / Coordinators -->
+  <section id="contact" class="section contact">
+    <div class="info-card" style="max-width:900px;">
+      <h2 style="color:var(--accent-1);">Meet Our Coordinators</h2>
+      <p style="color:var(--muted)">Contact the ASTEEVIA team directly for queries or assistance.</p>
+
+      <div class="coordinators">
+        <div class="coord">
+          <img src="logo1.jpeg" alt="Coordinator 1">
+          <h4>S</h4>
+          <p>Event</p>
+          <p>📞 +91 98765 43210</p>
+          <div class="socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="coord">
+          <img src="coord2.jpg" alt="Coordinator 2">
+          <h4>R</h4>
+          <p>Technical </p>
+          <p>📞 +91 91234 56789</p>
+          <div class="socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="coord">
+          <img src="coord3.jpg" alt="Coordinator 3">
+          <h4>A</h4>
+          <p>Design </p>
+          <p>📞 +91 90123 45678</p>
+          <div class="socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <a class="map-link" href="https://maps.google.com/?q=St+Agnel+College+Mangalore" target="_blank">
+        <i class="fa-solid fa-location-dot"></i> View on Google Maps
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Popup -->
+<div id="popup" class="popup" role="dialog" aria-hidden="true">
+  <div class="box">
+    <div class="title" id="popupTitle"></div>
+    <div id="popupBody" style="color:var(--muted);margin-top:8px"></div>
+    <div style="margin-top:14px;text-align:right">
+      <button class="btn" id="closePopup">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
