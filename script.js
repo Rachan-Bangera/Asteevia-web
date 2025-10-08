@@ -28,8 +28,8 @@ setInterval(updateCountdown,1000);
 /* -------- Events ring behavior & popups -------- */
 /* Event details map */
 const eventDetails = {
-  "Web Design":"Create modern responsive websites. Prizes for UX & creativity.",
-  "Coding Challenge":"Timed algorithm and DS problems — think fast, code faster.",
+  "Web ":"Create modern responsive websites. Prizes for UX & creativity.",
+  "Coding Chall":"Timed algorithm and DS problems — think fast, code faster.",
   "AI Hackathon":"Build ML/AI prototypes to solve practical problems.",
   "Cyber Security Quiz":"Test your cybersecurity intuition & challenge the experts.",
   "Game Development":"Design and develop playable game demos in limited time.",
@@ -104,7 +104,7 @@ form.addEventListener('submit', (e)=>{
 
 /* small helper: open brochure placeholder */
 function openBrochure(){
-  alert("Brochure link placeholder — replace with file or URL.");
+  alert("C:\Users\ASUS\Downloads");
 }
 
 /* Accessibility: close nav when clicking outside */

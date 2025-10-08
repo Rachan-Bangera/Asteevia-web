@@ -91,8 +91,9 @@
   grid-template-columns: 1fr 420px;
   gap:22px;
   align-items:center;
-  
 }
+
+
 
 /* Left column: intro */
 .highlight .left {
@@ -198,6 +199,23 @@
   filter: blur(18px);
   opacity:0.12;
   transform: translate(70px,-20px);
+}
+/* about */
+.highlight2 {
+  width: min(880px, 92%);
+  max-width:880px;
+  border-radius:18px;
+  backdrop-filter: blur(8px) saturate(1.1);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 40px rgba(3,6,12,0.6), 0 0 60px rgba(0,0,0,0.5);
+  padding:28px;
+  align-items:center;
+}
+
+.about-as{
+  color:#02141a;font-weight:700;
+  text-shadow:0 8px 30px rgba(0,229,255,0.06)
 }
 
 /* --- Events section --- */
@@ -405,12 +423,14 @@
   .highlight{ grid-template-columns: 1fr 320px; gap:14px; }
   .center-face{ width:120px; height:120px }
   .icon{ width:56px;height:56px }
+  .popup{padding-left: 5px;width: 275px;}
 }
 @media(max-width:720px){
   .highlight{ grid-template-columns: 1fr; padding:18px; gap:12px;}
   .count-card{ order:3; width:100% }
   .brand{ font-size:34px }
   .highlight .left { text-align:center }
+  .popup{padding-left: 5px;width: 275px;}
 }
 @media(max-width:480px){
   .hamburger{ width:48px;height:48px }
