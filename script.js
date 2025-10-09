@@ -1,3 +1,46 @@
+ const brochureBtn = document.getElementById("brochureBtn");
+  const brochureModal = document.getElementById("brochureModal");
+  const closeBtn = document.querySelector(".close");
+  const slides = document.getElementById("slides");
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
+  const downloadBrochure = document.getElementById("downloadBrochure");
+
+  let currentIndex = 0;
+  const totalSlides = slides.children.length;
+
+  // Open/Close modal
+  brochureBtn.onclick = () => brochureModal.style.display = "block";
+  closeBtn.onclick = () => brochureModal.style.display = "none";
+  window.onclick = (e) => {
+    if (e.target === brochureModal) brochureModal.style.display = "none";
+  };
+
+  // Slide controls
+  function updateSlide() {
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  next.onclick = () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlide();
+  };
+
+  prev.onclick = () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlide();
+  };
+
+  // Download brochure
+  downloadBrochure.onclick = () => {
+    const link = document.createElement("a");
+    link.href = "brochure.pdf"; // 📄 your PDF file path
+    link.download = "ASTEEVIA_ITFest_Brochure.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
 /* -------- Nav toggle + auto close on link click -------- */
 const hamburger = document.getElementById('hamburger');
 const navPanel = document.getElementById('navPanel');
@@ -28,17 +71,16 @@ setInterval(updateCountdown,1000);
 /* -------- Events ring behavior & popups -------- */
 /* Event details map */
 const eventDetails = {
-  "Web ":"Create modern responsive websites. Prizes for UX & creativity.",
-  "Coding Chall":"Timed algorithm and DS problems — think fast, code faster.",
-  "AI Hackathon":"Build ML/AI prototypes to solve practical problems.",
-  "Cyber Security Quiz":"Test your cybersecurity intuition & challenge the experts.",
-  "Game Development":"Design and develop playable game demos in limited time.",
-  "UI/UX Design":"Prototype human-first user interfaces and flows.",
-  "Data Science Contest":"Analyze datasets and present insights & models.",
-  "Cloud Computing Workshop":"Hands-on labs for cloud deployment and infra.",
-  "IoT Challenge":"Prototype smart devices and sensor-driven solutions.",
-  "Robotics Contest":"Design autonomous robots to complete tasks & compete.",
-  "AR/VR Innovation":"Create immersive experiences using AR/VR toolkits."
+  "Stealth Mastermind":"IT Manager (For UG).",
+  "Shoguns Riddle":"Quiz (Both PUC and UG).",
+  "Secrets of the Creed":"Surprise Event (Both PUC and UG).",
+  "Blade Script":"Error Detection (Both PUC and UG).",
+  "Shadows in Motion":"Reel Making (Both PUC and UG).",
+  "Shadow Scolars":"Paper Presentation (For UG).",
+  "Obsidian Invention":"Science and IT Model (For UG).",
+  "Dark Act":"Mad Ad (Both PUC and UG).",
+  "Cipher Chase":"Math Relay (Both PUC and UG).",
+  "Ghost Grid":"Web designing (For UG).",
 };
 
 /* Hook up icons: click -> open popup */
@@ -115,3 +157,4 @@ document.addEventListener('click', (e)=>{
     nav.classList.remove('show');
   }
 });
+

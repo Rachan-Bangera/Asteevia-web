@@ -41,7 +41,30 @@
 
         <div class="controls">
           <button class="btn" onclick="window.open('https://forms.gle/YOUR-GOOGLE-FORM-LINK','_blank')">Get Register</button>
-          <button class="btn secondary" onclick="openBrochure()">Brochure</button>
+          <!-- <button class="btn secondary" onclick="openBrochure()">Brochure</button> -->
+           <center>
+  <button id="brochureBtn">Brochure</button>
+</center>
+
+<!-- 🔹 Brochure Modal -->
+<div id="brochureModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <div class="slider">
+      <div class="slides" id="slides">
+        <img src="icons/icon1.png" alt="Page 1">
+        <img src="icons/icon2.png" alt="Page 2">
+        <img src="brochure-page3.jpg" alt="Page 3">
+      </div>
+
+      <span class="arrow prev" id="prev">&#10094;</span>
+      <span class="arrow next" id="next">&#10095;</span>
+    </div>
+
+    <button class="download-btn" id="downloadBrochure">Download PDF</button>
+  </div>
+</div>
         </div>
 
         <div class="count-info">Next — Live on <strong>Nov 5, 2025</strong> · 9:00 AM</div>
@@ -64,7 +87,7 @@
   <section id="about" class="section about" aria-label="About">
     <div class="highlight2">
     <div class="info-card ">
-      <h2>About ASTEEVIA</h2>
+      <h2 class="about-as">About ASTEEVIA</h2>
       <p style="color:var(--muted);line-height:1.6">
         Asteevia 2025 is a prestigious intercollegiate fest organized by the Department of BCA and BSC
         at Sri Mahaveera College. It serves as a vibrant platform for students to showcase their 
@@ -89,21 +112,21 @@
     <div class="hint">💡 Hover or tap an icon to view details</div>
 
     <div class="medallion" role="group" aria-label="Event ring">
-      <div class="center-face"><img src="logo1.png" alt="Center"></div>
+      <div class="center-face"><img src="icons/center-img.png" alt="Center"></div>
 
       <div class="ring" id="ring">
         <!-- orbiter elements; each has a --deg custom property to set angle -->
         <!-- radius controlled by --r on .icon (default set in CSS) -->
-        <div class="orbiter" style="--deg:0deg"><div class="icon" data-event="Web " data-key="Web "><img src="icons/icon1.png" alt=""></div></div>
-        <div class="orbiter" style="--deg:35.5deg"><div class="icon" data-event="Coding Challenge" data-key="Coding Challenge"><img src="icons/icon2.png" alt=""></div></div>
-        <div class="orbiter" style="--deg:71deg"><div class="icon" data-event="AI Hackathon" data-key="AI Hackathon"><img src="logo2.png" alt=""></div></div>
-        <div class="orbiter" style="--deg:106.5deg"><div class="icon" data-event="Cyber Security Quiz" data-key="Cyber Security Quiz"><img src="icons/icon4.png" alt=""></div></div>
-        <div class="orbiter" style="--deg:142deg"><div class="icon" data-event="Game Development" data-key="Game Development"><img src="icons/icon5.png" alt=""></div></div>
-        <div class="orbiter" style="--deg:177.5deg"><div class="icon" data-event="UI/UX Design" data-key="UI/UX Design"><img src="icons/icon6.png" alt=""></div></div>
-        <div class="orbiter" style="--deg:213deg"><div class="icon" data-event="Data Science Contest" data-key="Data Science Contest"><img src="icons/icon7.png" alt=""></div></div>
-        <div class="orbiter" style="--deg:248.5deg"><div class="icon" data-event="Cloud Workshop" data-key="Cloud Computing Workshop"><img src="icons/icon8.png" alt=""></div></div>
-        <div class="orbiter" style="--deg:284deg"><div class="icon" data-event="IoT Challenge" data-key="IoT Challenge"><img src="icons/icon9.png" alt=""></div></div>
-        <div class="orbiter" style="--deg:320deg"><div class="icon" data-event="Robotics Contest" data-key="Robotics Contest"><img src="icons/icon10.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:0deg"><div class="icon" data-event="Stealth Mastermind" data-key="Stealth Mastermind"><img src="icons/icon1.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:35.5deg"><div class="icon" data-event="Shoguns Riddle" data-key="Shoguns Riddle"><img src="icons/icon2.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:71deg"><div class="icon" data-event="Secrets of the Creed" data-key="Secrets of the Creed"><img src="icons/icon3.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:106.5deg"><div class="icon" data-event="Blade Script" data-key="Blade Script"><img src="icons/icon4.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:142deg"><div class="icon" data-event="Shadows in Motion" data-key="Shadows in Motion"><img src="icons/icon5.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:177.5deg"><div class="icon" data-event="Shadow Scolars" data-key="Shadow Scolars"><img src="icons/icon6.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:213deg"><div class="icon" data-event="Dark Act" data-key="Dark Act"><img src="icons/icon7.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:248.5deg"><div class="icon" data-event="Obsidian Invention" data-key="Obsidian Invention"><img src="icons/icon8.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:284deg"><div class="icon" data-event="Cipher Chase" data-key="Cipher Chase"><img src="icons/icon9.png" alt=""></div></div>
+        <div class="orbiter" style="--deg:320deg"><div class="icon" data-event="Ghost Grid" data-key="Ghost Grid"><img src="icons/icon10.png" alt=""></div></div>
         <!-- <div class="orbiter" style="--deg:320deg"><div class="icon" data-event="AR/VR Innovation" data-key="AR/VR Innovation"><img src="icons/icon11.png" alt=""></div></div> -->
       </div>
     </div>
@@ -156,24 +179,18 @@
       <div class="map-container" style="text-align:center; margin-top: 40px;">
       <h2 style="color: #fff; font-family: 'Inter', sans-serif;">Find Us</h2>
 
-  <!-- Embedded Google Map -->
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.354141079437!2d74.98666997481896!3d13.068305290792537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf8a7d3f1f80c3%3A0x4f16a8c056b07b56!2sSri%20Mahaveera%20College%2C%20Moodbidri!5e0!3m2!1sen!2sin!4v1728300000000!5m2!1sen!2sin" 
-    width="100%" height="400" style="border:0; border-radius:15px;" 
-    allowfullscreen="" loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
+ 
 
-   <!-- <a class="map-link" href="https://maps.google.com/?q=St+Agnel+College+Mangalore" target="_blank">
+   <a class="map-link" href="https://maps.app.goo.gl/rtafqM5e9cQh3RnS8?g_st=aw" target="_blank">
         <i class="fa-solid fa-location-dot"></i> View on Google Maps
       </a>
-    </div> -->
+    </div>
 
   <!-- Instagram QR Scanner -->
   <div style="margin-top: 30px;">
     <h3 style="color:#fff; font-family: 'Inter', sans-serif;">Follow us on Instagram</h3>
     <p style="color:#ccc; font-size:14px;">Scan to visit our official page</p>
-    <img src="your-instagram-qr.png" alt="Instagram QR Code" 
+    <img src="inta-img.jpeg" alt="Instagram QR Code" 
          style="width:180px; height:180px; border-radius:20px; box-shadow:0 0 15px rgba(255,255,255,0.3); margin-top:10px;">
   </div>
 </div>
