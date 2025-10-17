@@ -34,7 +34,7 @@
   // Download brochure
   downloadBrochure.onclick = () => {
     const link = document.createElement("a");
-    link.href = "brochure.pdf"; // 📄 your PDF file path
+    link.href = "Asteevia_Brocher_PDF.pdf"; // 📄 your PDF file path
     link.download = "ASTEEVIA_ITFest_Brochure.pdf";
     document.body.appendChild(link);
     link.click();

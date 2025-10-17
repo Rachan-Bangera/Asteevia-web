@@ -173,6 +173,7 @@
     background-size:300% 300%;
     animation: glowMove 4s linear infinite;
     text-shadow:0 0 25px rgba(255,107,0,0.3);
+  
   }
   @keyframes glowMove{
     0%{background-position:0% 50%;}
@@ -184,6 +185,7 @@
   color:var(--muted);
   font-size:15px;
   margin-bottom:16px;
+  margin-top:10px ;
   line-height:1.45;
 }
 
@@ -195,10 +197,11 @@
   margin-bottom:14px; 
 }
 .btn {
-  background: linear-gradient(90deg, var(--accent-1), #6ef0ff);
+   background: linear-gradient(90deg, #0ff, #06f);
   color:#02141a;
-  font-weight:700;
-  padding:10px 16px;
+  padding: 12px 28px;
+  font-size: 18px;
+  font-weight: bold;
   border-radius:12px;
   border:none;
   cursor:pointer;
@@ -330,8 +333,8 @@
   top:50%; 
   transform:translate(-50%,-50%); 
   z-index:6;
-  width:150px; 
-  height:150px; 
+  width:200px; 
+  height:200px; 
   border-radius:50%; 
   overflow:hidden; 
   display:flex; 
@@ -483,14 +486,7 @@
   .coord:hover{
     transform:translateY(-6px);
   }
-  .coord img{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:10px;
-    box-shadow:0 0 15px rgba(0,229,255,0.4);
-  }
+ 
   .coord h4{
     margin:4px 0;
     color:var(--accent-1);}
@@ -515,7 +511,7 @@
 
     /* 🔹 Brochure button */
   #brochureBtn {
-    background: linear-gradient(90deg, #0ff, #06f);
+    background: linear-gradient(90deg, rgb(255, 179, 0), rgb(255, 98, 0));
     border: none;
     color: #000;
     padding: 12px 28px;
@@ -524,6 +520,7 @@
     border-radius: 12px;
     cursor: pointer;
     transition: 0.3s;
+    margin-left: 90px;
   }
   #brochureBtn:hover {
     transform: scale(1.05);
