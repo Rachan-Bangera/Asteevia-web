@@ -31,16 +31,7 @@
     updateSlide();
   };
 
-  // Download brochure
-  downloadBrochure.onclick = () => {
-    const link = document.createElement("a");
-    link.href = "Asteevia_Brocher_PDF.pdf"; // 📄 your PDF file path
-    link.download = "ASTEEVIA_ITFest_Brochure.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
+  
 /* -------- Nav toggle + auto close on link click -------- */
 const hamburger = document.getElementById('hamburger');
 const navPanel = document.getElementById('navPanel');
