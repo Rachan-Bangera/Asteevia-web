@@ -466,6 +466,10 @@
  }
 
    /* 👥 Coordinators Section */
+   
+   .info-card h2{ 
+    margin-left: 50px;
+  }
   .coordinators{
     display:flex;
     flex-wrap:wrap;
@@ -474,7 +478,7 @@
     margin-top:20px;
   }
   .coord{
-    width:240px;
+    width:180px;
     background:rgba(255,255,255,0.03);
     border:1px solid rgba(255,255,255,0.05);
     border-radius:12px;
