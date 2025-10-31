@@ -42,7 +42,7 @@ document.querySelectorAll('[data-close]').forEach(a=>{
 });
 
 /* -------- countdown timer -------- */
-const target = new Date('2025-11-04T09:00:00').getTime();
+const target = new Date('2025-11-05T09:00:00').getTime();
 function updateCountdown(){
   const now = Date.now();
   let diff = target - now;
